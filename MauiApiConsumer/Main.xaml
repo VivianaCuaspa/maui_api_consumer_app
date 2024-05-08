@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApiConsumer.Main"
+             Title="Main">
+    <ScrollView>
+        <StackLayout Spacing="10" Padding="10">
+            <!-- Sección de Clasificaciones -->
+            <Frame CornerRadius="10" Padding="10" Margin="5">
+                <StackLayout>
+                    <Label Text="Clasificaciones" FontAttributes="Bold" HorizontalOptions="Center"  Style="{StaticResource MainLabel}"/>
+                    <Label Text="Id clasificación:"/>
+                    <Entry x:Name="txtId"/>
+
+                    <Label Text="Clasificación:"/>
+                    <Entry x:Name="txtClasificacion"/>
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                        <Button x:Name="cmdCreate" Text="INSERTAR" Clicked="cmdCreate_Clicked"  />
+                        <Button x:Name="cmdRead" Text="LEER" Clicked="cmdRead_Clicked" Style="{StaticResource PrimaryButton}"/>
+                        <Button x:Name="cmdUpdate" Text="ACTUALIZAR" Clicked="cmdUpdate_Clicked"/>
+                        <Button x:Name="cmdDelete" Text="BORRAR" Clicked="cmdDelete_Clicked" Style="{StaticResource PrimaryButton}"/>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+
+            <!-- Sección de Productos -->
+            <Frame CornerRadius="10" Padding="10" Margin="5">
+                <StackLayout>
+                    <Label Text="Productos" FontAttributes="Bold" HorizontalOptions="Center"  Style="{StaticResource MainLabel}" />
+                    <Label Text="Id producto:"/>
+                    <Entry x:Name="txtIdProducto"/>
+
+                    <Label Text="Nombre producto:"/>
+                    <Entry x:Name="txtNombreProducto"/>
+
+                    <Label Text="Existencia:"/>
+                    <Entry x:Name="txtExistencia"/>
+
+                    <Label Text="Precio unitario:"/>
+                    <Entry x:Name="txtPrecioUnitario"/>
+
+                    <Label Text="IVA:"/>
+                    <Entry x:Name="txtIVA"/>
+
+                    <Label Text="ID Clasificación:"/>
+                    <Entry x:Name="txtClasificacionId"/>
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                        <Button x:Name="cmdCreateProd" Text="INSERTAR" Clicked="cmdCreateProd_Clicked"/>
+                    <Button x:Name="cmdReadProd" Text="LEER" Clicked="cmdReadProd_Clicked" Style="{StaticResource PrimaryButton}"/>
+                        <Button x:Name="cmdUpdateProd" Text="ACTUALIZAR" Clicked="cmdUpdateProd_Clicked"/>
+                    <Button x:Name="cmdDeleteProd" Text="BORRAR" Clicked="cmdDeleteProd_Clicked" Style="{StaticResource PrimaryButton}"/>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
